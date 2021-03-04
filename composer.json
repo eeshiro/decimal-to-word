@@ -11,6 +11,9 @@
     ],
     "minimum-stability": "stable",
     "autoload": {
+        "psr-4": {
+          "DecimalToWord\\": "src/DecimalToWord/"
+        },
         "files": ["src/DecimalToWord.php"]
     },
     "require": {}
