@@ -43,9 +43,15 @@ class DecimalToWord
 	public static $formatted = 0;
 
 	public static $currency = "";
+	public static $curr_dec = "";
 	
-	public static function convert($decimal, $currency=""){
+	public static function convert($decimal, $currency="", $curr_dec = null){
 		self::$currency = $currency;
+		self::$curr_dec = $curr_dec;
+
+		if($decimal == 0){
+			return "Zero ".$currency;
+		}
 
 		if(!is_numeric($decimal)) return "(Invalid value)";
 
@@ -62,7 +68,9 @@ class DecimalToWord
 
 		$converted_dec  = self::generate($dec, 0);
 
-		$converted_dec = ((int)$int != 0 && (int)$dec !=0 ? " and ".$converted_dec : $converted_dec );
+		$dec_separator = $curr_dec ? ' and ' : ' point ';
+
+		$converted_dec = ((int)$int != 0 && (int)$dec !=0 ? $dec_separator.$converted_dec : $converted_dec );
 
 
 		$exp_int = explode(",", strrev($int));
@@ -111,7 +119,9 @@ class DecimalToWord
 
 		$stmt = rtrim($stmt,"-");
 
-		return $stmt.= ($pos > 1 && $value !=0 ? self::$hundreds[$pos] : ($pos == 0 && (int)$value != 0 ? " Centavos": ""));
+		return $stmt.= ($pos > 1 && $value !=0 ? self::$hundreds[$pos] : 
+			($pos == 0 && (int)$value != 0 ? " ".self::$curr_dec: "")
+		);
 	}
 }
 
