@@ -1,0 +1,17 @@
+{
+    "name": "eeshiro/decimal-to-word",
+    "description": "Decimal to word converter for monetary value",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Eeshiro Deku",
+            "email": "eeshiro.deku@gmail.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "autoload": {
+        "files": ["src/DecimalToWord.php"]
+    },
+    "require": {}
+}
