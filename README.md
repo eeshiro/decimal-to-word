@@ -6,7 +6,7 @@ Decimal to word for monetary value
 	DecimalToWord::$formatted;
 
 # example
-	DecimalToWord::convert(1599.6, 'Pesos');<br>
+	DecimalToWord::convert(1599.6, 'Pesos', 'Centavos');<br>
 	DecimalToWord::$formatted;<br>
 
 	//One Thousand, Five Hundred Ninety-Nine Pesos and Sixty Centavos<br>
