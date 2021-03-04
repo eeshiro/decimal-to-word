@@ -1,6 +1,6 @@
 {
     "name": "eeshiro/decimal-to-word",
-    "version" : "1.0.1",
+    "version" : "1.0.0",
     "description": "Decimal to word converter for monetary values",
     "keywords": ["decimal-to-word","money-words"],
     "homepage": "https://github.com/eeshiro/decimal-to-word",
