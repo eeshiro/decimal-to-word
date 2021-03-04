@@ -1,5 +1,6 @@
 {
     "name": "eeshiro/decimal-to-word",
+    "version": "1.0.0",
     "description": "Decimal to word converter for monetary value",
     "type": "library",
     "license": "MIT",
