@@ -1,6 +1,9 @@
 {
     "name": "eeshiro/decimal-to-word",
+    "version" : "1.0.1",
     "description": "Decimal to word converter for monetary values",
+    "keywords": ["decimal-to-word","money-words"],
+    "homepage": "https://github.com/eeshiro/decimal-to-word",
     "type": "library",
     "license": "MIT",
     "authors": [
@@ -20,6 +23,5 @@
     },
     "require-dev": {
         "phpunit/phpunit": "~4.0"
-    },
-    "minimum-stability": "dev"
+    }
 }
